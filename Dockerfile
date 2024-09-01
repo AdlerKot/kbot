@@ -1,5 +1,3 @@
-#FROM  quay.io/projectquay/golang:1.20
-#FROM golang:1.23 as builder
 FROM quay.io/projectquay/golang:1.23 builder
 WORKDIR /go/src/app
 COPY . .
