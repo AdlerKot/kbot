@@ -19,7 +19,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: test01
-        run: echo ${{ variables.QWE}} && echo $(git describe --tags --abbrev=0)-$(git rev-parse --short HEAD)
+        run: |
+         echo $(git describe --tags --abbrev=0)-$(git rev-parse --short HEAD)
+         echo 123
       - name: Build&Push
         run: make image push
       - name: Clean
