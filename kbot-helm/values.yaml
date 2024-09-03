@@ -4,7 +4,7 @@
 replicaCount: 1
 image:
   repository: "fatcatmeow/kbot"
-  tag: "v1.1.2-39bea26"
+  tag: "v1.1.3-c23f269"
   arch: "amd64"
   os: "linux"
 secret:
@@ -13,4 +13,3 @@ secret:
   key: "token"
 securityContext:
   privileged: true
-
