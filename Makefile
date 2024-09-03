@@ -1,7 +1,7 @@
 
 #APP = $(shell basename $(shell git remote get-url origin))
 APP=kbot
-REGISTRY=ghcr.io/fatcatmeow
+REGISTRY=ghcr.io/AdlerKot
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
 #echo $(git describe --tags --abbrev=0)-$(git rev-parse --short HEAD)
 TARGETARCH=amd64
