@@ -22,10 +22,12 @@ jobs:
         run: |
          echo $(git describe --tags --abbrev=0)-$(git rev-parse --short HEAD)
          echo 123
+         git tag
       - name: Build&Push
-        run: make image push
-      - name: Clean
-        run: make clean
+        # run: make image push
+        run: make check
+      # - name: Clean
+      #   run: make clean
       
   # cd:
   #   name: CD

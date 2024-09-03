@@ -26,6 +26,8 @@ push:
 	docker push ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
 clean:
 	docker rmi ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
+check:
+	echo ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
 # image2:
 # 	docker build . -t ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
 # push2:
