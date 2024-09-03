@@ -22,13 +22,16 @@ build-mac: format get
 
 image: 
 	docker build . -t ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
-
-image2:
-	docker build . -t ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
 push:
-	docker push ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
-clean: 
-	rm -rf kbot
-	docker rmi ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
-linux:
-	CGO_ENABLED=0 GOOS=linux GOARCH=${TARGETARCH} go build -v -o kbot -ldflags "-X="github.com/AdlerKot/kbot/cmd.appVersion=${VERSION}
+	docker push ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
+clean:
+	docker rmi ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
+# image2:
+# 	docker build . -t ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
+# push2:
+# 	docker push ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
+# clean: 
+# 	rm -rf kbot
+# 	docker rmi ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
+# linux:
+# 	CGO_ENABLED=0 GOOS=linux GOARCH=${TARGETARCH} go build -v -o kbot -ldflags "-X="github.com/AdlerKot/kbot/cmd.appVersion=${VERSION}
