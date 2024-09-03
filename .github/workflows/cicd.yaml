@@ -24,7 +24,11 @@ jobs:
         run: |
          echo $(git describe --tags --abbrev=0)-$(git rev-parse --short HEAD)
       - name: Build&Push
-        run: make image push
+        run: | 
+          make image
+          docker images
+          make push
+          
       - name: Clean
         run: make clean
       
