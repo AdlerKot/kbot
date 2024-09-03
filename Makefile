@@ -35,5 +35,3 @@ check:
 # clean: 
 # 	rm -rf kbot
 # 	docker rmi ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
-# linux:
-# 	CGO_ENABLED=0 GOOS=linux GOARCH=${TARGETARCH} go build -v -o kbot -ldflags "-X="github.com/AdlerKot/kbot/cmd.appVersion=${VERSION}
