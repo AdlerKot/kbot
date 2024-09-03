@@ -5,7 +5,8 @@ replicaCount: 1
 image:
   repository: "fatcatmeow/kbot"
   tag: "v1.1.2-39bea26"
-  arch: arm64
+  arch: "amd64"
+  os: "linux"
 secret:
   name: "kbot"
   env: "TELE_TOKEN"
