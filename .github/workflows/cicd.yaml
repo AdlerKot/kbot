@@ -25,7 +25,6 @@ jobs:
          echo $(git describe --tags --abbrev=0)-$(git rev-parse --short HEAD)
       - name: Build&Push
         run: make image push
-        permissions: write-all
       - name: Clean
         run: make clean
       
