@@ -4,7 +4,7 @@
 replicaCount: 1
 image:
   repository: "ghcr.io/adlerkot/kbot"
-  tag: "v1.1.5-5357252"
+  tag: "v1.1.5-6da9449"
   arch: "amd64"
   os: "linux"
 secret:
