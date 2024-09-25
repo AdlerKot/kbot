@@ -18,4 +18,4 @@ export TELE_TOKEN
 #run current telebot, telegram token will be read from env: 
 ./kbot start 
 ```
-Test 001
+Test 002
